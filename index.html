@@ -3,53 +3,66 @@
   <head>
     <meta charset="UTF-8">
     <title>Your Choice</title>
-    <script src="//code.jquery.com/jquery-1.12.0.min.js"> 
-   </script>
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+  <style> 
+body {
+    background-color:#00ff00;
+}
+</style>
    <script>
         $(function(){
     $("button").click(function(){
-      var div= $("#div1").css("color","red").slideUp(20000).slideDown(200);
-      div.animate({left: '100px'}, "slow");
+      var div= $("#div1").css("color","red").slideUp(200).slideDown(200);
+      div.animate({left: '250px'}, "slow");
       div.animate({fontSize: '3em'},2000);
 
 });
-     $("#div2").css("color", "green").slideUp(200).slideDown(200);
-     $("#div3").css("color","blue").slideUp(200).slideDown(200);
-     $("#div4").css("color", "pink").slideUp(200).slideDown(200);
-     $("#div5").css("color", "purple").slideUp(200).slideDown(200);
-     $("#div6").css("color", "orange").slideUp(200).slideDown(200);
+$('button').click(function(){
+       var userName = $('#userName').val();
+       $('input').css('background-color',userName);
+  });
+$('button').click(function(){
+       var userLastname = $('#userLastname ').val();
+       $('input').css('background-color',userLastname);
+  });
+$('button').click(function(){
+       var userColor = $('#userColor').val();
+       $('input').css('background-color',userColor);
+  });
+  
 
 
 });
-
    </script>
   </head>
   <body>
-  Name:  <input>  
+      <h1>Your Choice</h1>
+      <div id="example1">
+          <br>
+    <center>  Name:
+  <input id=" userName:">  
   <br>
   <br>
- 
-  LastName: <input>
+ LastName:
+ <input id="LastName:">
   <br>
   <br>
   What's your favorite color:
+  <input id="userColor">
    <br>
    <br>
- <button>Click to fade in boxes</button><br>
+
+
  <br>
 
  <br>
 <div id="div1" style="width:140px;height:60px;display:none;background-color:Black;position:absolute">HEllO</div>
+
 <br>
 <br>
-<div id="div2" style="width:80px;height:80px;display:none;background-color:green;"></div><br>
-<div id="div3" style="width:80px;height:80px;display:none;background-color:blue;"></div>
-<br>
-<div id="div4" style="width:80px;height:80px;display:none;background-color:pink;"></div><br>
-<div id="div5" style="width:80px;height:80px;display:none;background-color:purple;"></div><br>
-<div id="div6" style="width:80px;height:80px;display:none;background-color:orange;"></div>
 <br>
 <br>
-   <button>Submit he</button><br>
+ <button>Click here</button><br>
+ </center>
   </body>
 </html>
