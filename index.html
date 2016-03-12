@@ -6,17 +6,36 @@
     <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
   <style> 
 body {
-    background-color:#00ff00;
+    background-color:#BAE;
 }
 </style>
    <script>
-        $(function(){
-    $("button").click(function(){
-      var div= $("#div1").css("color","red").slideUp(200).slideDown(200);
-      div.animate({left: '250px'}, "slow");
-      div.animate({fontSize: '3em'},2000);
-
-});
+ $(function() {
+      $('#toRed').click(function(){
+        $('div').css('background-color','red');
+      });
+       $(function() {
+      $('#toBlue').click(function(){
+        $('div').css('background-color','blue');
+      });
+      $(function() {
+      $('#toPink').click(function(){
+        $('div').css('background-color','pink');
+      });
+       });
+      $(function() {
+      $('#toGreen').click(function(){
+        $('div').css('background-color','green');
+      });
+      $(function() {
+      $('#toYellow').click(function(){
+        $('div').css('background-color','yellow');
+      });
+      $(function() {
+      $('#toPurple').click(function(){
+        $('div').css('background-color','purple');
+      });
+  });
 $('button').click(function(){
        var userName = $('#userName').val();
        $('input').css('background-color',userName);
@@ -29,39 +48,76 @@ $('button').click(function(){
        var userColor = $('#userColor').val();
        $('input').css('background-color',userColor);
   });
-  
-
+   
+       $(function() {
+    $('span').hover(
+      function(){
+     $(this).css('font-size','40px');
+     },
+   function(){
+    $(this).css('font-size','16px'); 
+                
+    }); 
+           $(function(){
+    $("button").click(function(){
+      var div= $("#div1").css("color","red").slideUp(200).slideDown(200);
+      div.animate({left: '650px'}, "slow");
+      div.animate({fontSize: '3em'},2000);
 
 });
+   });
+   
+
+});
+});
+});
+});
+});
+
    </script>
   </head>
   <body>
-      <h1>Your Choice</h1>
-      <div id="example1">
+     <center> 
+      <span>Your</span><br>  <span>Choice</span> 
+      <div id="example1"></center>
           <br>
-    <center>  Name:
+    <center> 
+    <span>Name</span>
   <input id=" userName:">  
   <br>
   <br>
- LastName:
+  <span>LastName</span>
  <input id="LastName:">
   <br>
   <br>
-  What's your favorite color:
+  <span>What's your favorite color</span>
   <input id="userColor">
    <br>
-   <br>
-
-
+  <style>
+    div {
+      background-color:white;
+      color: Black;
+      width:200px;
+      padding: 0px;
+      margin: 20px 0;
+    }
+  </style>
  <br>
-
- <br>
+  <button id="toRed">Red!</button>
+  <button id="toBlue">Blue!</button>
+  <button id="toPink">Pink!</button>
+  <button id="toGreen">Green!</button>
+  <button id="toYellow">Yellow!</button>
+  <button id="toPurple">Purple!</button>
+<div>Which color should I be?</div>
 <div id="div1" style="width:140px;height:60px;display:none;background-color:Black;position:absolute">HEllO</div>
-
-<br>
-<br>
-<br>
-<br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
  <button>Click here</button><br>
  </center>
   </body>
